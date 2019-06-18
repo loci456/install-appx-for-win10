@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter import filedialog as fd
 import os
 from tkinter import messagebox as mb
-
+import webbrowser
 
 
 
@@ -20,6 +20,9 @@ def open_and_install():
     mb.showerror("All done", op + "\n All done, program was installed in PC")
 
 
+
+def callback(url):
+    webbrowser.open_new(url)
 
 b1 = Button(root, text= 'Install Appx', command=open_and_install)
 b1.config(width=20, height=2, fg='blue')
