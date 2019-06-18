@@ -15,7 +15,6 @@ root.resizable(width=False, height=False)
 
 def open_and_install():
     op = fd.askopenfilename(title='Choose a file')
-    print(op)
     ps = os.system("PowerShell add-appxpackage" + ' ' + op)
     mb.showerror("All done", op + "\n All done, program was installed in PC")
 
